@@ -19,6 +19,7 @@ function http_post($url, $post_data) {
     return $result;
 }
 
+// 发送日志数据
 $url = 'http://127.0.0.1/';
 $post_data = [ 
     'system' => '系统',

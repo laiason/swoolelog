@@ -30,7 +30,7 @@ class mongodb{
             $result = $this->manager->executeBulkWrite("{$this->db}.{$collection}", $this->bulk, $this->writeConcern);
 
             return true;
-        }catch(Exception $e) {
+        }catch(MongoDB\Driver\Exception\BulkWriteException $e) {
             return false;
         }
     }
@@ -54,7 +54,7 @@ class mongodb{
             }
 
             return $data;    
-        }catch(Exception $e) {
+        }catch(MongoDB\Driver\Exception\BulkWriteException $e) {
             return false;
         }
     }
@@ -74,7 +74,7 @@ class mongodb{
             $result = $this->manager->executeBulkWrite("{$this->db}.{$collection}", $this->bulk, $this->writeConcern);
 
             return true;
-        }catch(Exception $e) {
+        }catch(MongoDB\Driver\Exception\BulkWriteException $e) {
             return false;
         }
     }
@@ -92,7 +92,7 @@ class mongodb{
             $result = $this->manager->executeBulkWrite("{$this->db}.{$collection}", $this->bulk, $this->writeConcern); 
             
             return true;
-        }catch(Exception $e) {
+        }catch(MongoDB\Driver\Exception\BulkWriteException $e) {
             return false;
         }
     }
